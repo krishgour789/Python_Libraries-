@@ -1,4 +1,5 @@
 import numpy as np
+
 # p = (1,45,21,43)
 # print(type(p))
 
@@ -66,7 +67,71 @@ print(b.ndim)
 # k = np.random.choice(20,3)    # it will select 3 random elements from the range of 0 to 19
 # print(k)
 
-a = ["python","java","c++","javascript"]
-k = np.random.choice(a,2)    # it will select 2 random elements from the list a
-print(k)
+# a = ["python","java","c++","javascript"]
+# k = np.random.choice(a,2)    # it will select 2 random elements from the list a
+# print(k)
 
+#-------------Broadcasting Operator------------
+# a = np.zeros((2,3))+6
+# print(a)
+
+# a = np.zeros((2,3),dtype=int)+6
+# print(a)
+
+# a = np.zeros((2,3),dtype=int)-6
+# print(a)
+
+'''[[-6 -6 -6]
+ [-6 -6 -6]]
+
+'''
+# a = np.ones((3,4),dtype=int)*5
+# print(a)
+'''output {
+[[5 5 5 5]
+ [5 5 5 5]
+ [5 5 5 5]]
+}'''
+
+'''random rand'''
+# a = np.random.rand(10)
+# print(a)
+
+
+'''linspace'''  # it give equal values or distance
+# k = np.linspace(1,10,4,retstep=True,dtype=int)
+# print(k)
+
+
+''' if we want to insert the value in array then we use insert function'''
+# k = np.array([1,2,54,54,23,67,5])
+# print(k)
+# print(np.insert(k,3,34))  #(arrayname,index,value) with this we can insert with position
+# print(np.append(k,400)) # with the help of append we can insert the value in last 
+# print(np.delete(k,2))  #with the help of delete module we can delete with indexing number 
+
+''''to find the row and column in array '''
+# k = [[1,2,3],[23,24,1],[4,3,6]]
+# j = np.array(k)
+# print(j)
+# print("dimesion",np.ndim(j))
+# print("rows and column",j.shape)
+# print("size",j.size)
+
+''' to convert row into column and column into row'''
+# k = [[1,2,3],[23,24,1],[4,3,6]]
+# j = np.array(k)
+# print(np.transpose(j))
+
+
+''' to add the two array if they are 1d and 2d'''
+# a1 = [1,2,4,5,3]
+# a2 = [3,2,6,4,3]
+# d1 = np.array(a1)
+# d2 = np.array(a2)
+# print(np.add(d1,d2))
+
+'if we add 2d so we should convert it into 2d with {reshape}'
+# s1 = d1.reshape(1,5)
+# s2 = d2.reshape(1,5)
+# print(np.add(s1,s2))
