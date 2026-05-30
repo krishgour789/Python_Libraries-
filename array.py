@@ -135,3 +135,62 @@ print(b.ndim)
 # s1 = d1.reshape(1,5)
 # s2 = d2.reshape(1,5)
 # print(np.add(s1,s2))
+
+# a = np.array([[1,2,3],[4,5,6],[7,8,9]])
+# print(a)
+# print(np.delete(a,1,axis=0))  # it will delete the row with index 1
+# print(np.delete(a,1,axis=1))  # it will delete the column with index 1
+
+# a = np.array([10,20,30,40,50])
+# 30 convert into 300
+# a[2] = 300
+# print(a)
+
+# a = np.array([[1,2,3],[4,5,6],[7,8,9]])
+# print(a)
+# a[1,1] = 400
+# print(a)
+
+# a = np.array([[1,2,3],[4,5,6],[7,8,9]])
+# for i in np.nditer(a):  # it will iterate through each element of the array a and print it
+#     print(i)
+
+#normal for loop -> it will iterate through each row of the array a and print it
+
+# for i,v in np.ndenumerate(a):  # it will iterate through each element of the array a and print its index and value
+#     print(i,v)
+
+# maths & stats functions of numpy
+'''a = np.array([1,2,3,4,5])
+b = np.array([10,20,30,40,50])
+print(np.add(a,b))  # it will add the two arrays element wise
+print(np.subtract(a,b))  # it will subtract the two arrays element wise
+print(np.multiply(a,b))  # it will multiply the two arrays element wise
+print(np.divide(a,b))  # it will divide the two arrays element wise
+print(np.square(a))  # it will return the square of each element in the array a
+'''
+# a = np.array([-1,-2,3,4,5])
+# print(np.abs(a)) # it will convert the negative values into positive values and return the absolute value of each element in the array 
+
+# a = np.array([1,2,3,4,5])
+# print(a.max())  # it will return the maximum value in the array a
+# print(a.min())  # it will return the minimum value in the array a
+# print(a.mean())  # it will return the mean value of the array a
+# print(a.std())  # it will return the standard deviation of the array a
+
+# a  = np.array([1,2,3,4,5,6])
+# print(np.split(a,3))    # it will split the array a into 3 equal parts and return a list of arrays
+
+''' if we want to access the first array from the list of arrays then we can use indexing'''
+# a = np.array([1,2,3,4,5,6])
+# b = np.split(a,3)
+# print(b)
+# x = b[0]  # it will return the first array from the list of arrays b
+# print(x)
+
+t1 = np.array([1,2,3,4,5])
+t2 = np.array([6,7,8,9,10])
+k = np.hstack((t1,t2))  # it will stack the two arrays horizontally and return a new array
+print(k)
+v = np.vstack((t1,t2))  # it will stack the two arrays vertically and return a new array
+print(v)
