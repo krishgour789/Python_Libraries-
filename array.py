@@ -188,9 +188,29 @@ print(np.square(a))  # it will return the square of each element in the array a
 # x = b[0]  # it will return the first array from the list of arrays b
 # print(x)
 
-t1 = np.array([1,2,3,4,5])
-t2 = np.array([6,7,8,9,10])
-k = np.hstack((t1,t2))  # it will stack the two arrays horizontally and return a new array
-print(k)
-v = np.vstack((t1,t2))  # it will stack the two arrays vertically and return a new array
-print(v)
+# t1 = np.array([1,2,3,4,5])
+# t2 = np.array([6,7,8,9,10])
+# k = np.hstack((t1,t2))  # it will stack the two arrays horizontally and return a new array
+# print(k)
+# v = np.vstack((t1,t2))  # it will stack the two arrays vertically and return a new array
+# print(v)
+
+
+# nomral dot
+# a1 = np.array([1,2,3])
+# a2 = np.array([4,5,6])
+# print(np.dot(a1,a2))     #it will return multiply (1*4 + 2*5 + 3*6) and return the dot product of the two arrays a1 and a2
+# it is also called broadcasting bcz it multiplies the corresponding elements of the two arrays and returns the sum of the products
+
+# Cross Product
+# a1 = np.array([1,2,3])
+# a2 = np.array([4,5,6])
+# print(np.cross(a1,a2))  # it will return the cross product of the two arrays a1 and a2
+# # it is also called vector product bcz it returns a vector that is perpendicular to both a1 and a2 and has a magnitude equal to the area of the parallelogram that the vectors span 
+
+#slice
+# a = np.array([1,2,3,4,5,6])
+# print(a[0:5:1 ])   
+
+a = np.array([[1,2,3],[4,5,6],[7,8,9],[2,3,8]])
+print(a[2:4:1,1:3:1])  
