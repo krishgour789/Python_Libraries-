@@ -212,5 +212,60 @@ print(np.square(a))  # it will return the square of each element in the array a
 # a = np.array([1,2,3,4,5,6])
 # print(a[0:5:1 ])   
 
-a = np.array([[1,2,3],[4,5,6],[7,8,9],[2,3,8]])
-print(a[2:4:1,1:3:1])  
+# a = np.array([[1,2,3],[4,5,6],[7,8,9],[2,3,8]])
+# print(a[2:4:1,1:3:1])  
+
+# a1 = np.array([1,2,3,4,5])
+# a2 = np.array([10,20,30,40,50])
+# k= np.concatenate((a1,a2))  # it merge two arrays
+# print(k)
+# k1 = np.hstack((a1,a2))  # it work same as concatenate. it add column wise
+# print(k1)
+# k2 = np.vstack((a1,a2))   # it convert 1d into 2d array . it add row
+# print(k2)
+
+# a1 = np.array([[1,2],[3,4]])
+# a2 = np.array([[10,20],[30,40]])
+# k1 = np.hstack((a1,a2)) # it add according to column wise
+# k2 = np.vstack((a1,a2))  # it add according to Row wise
+# print(k1)
+# print(k2)
+
+# flatten => it convert multiple dimesion into 1d array. it copy the array
+# ravle => it share the memory address and also change the original values.
+
+# a = np.array([[1,2,3],[2,3,2]])
+# print(a.ndim)
+# x = a.flatten()   #----> it convert in 1d array /  there is no relationship in old and new varible created by flatten
+# print(x)
+# print(x.ndim)
+# x = np.append(x,10)   # --> with the help of append we can add any value but we shold give in which we want to add the value
+# print(x)
+
+# a = np.array([[1,2,3,4,5]])
+# print(a)
+# x = a.ravel()  # it share the memory address and the change the original copy
+# print(x)
+# x[1] = 200
+# print(x)    # [  1 200   3   4   5]
+# print(a)    # [[  1 200   3   4   5]]  -> in this original array alos changed
+
+
+# the major differnce is it doesn't convert into 1d array
+# copy ----> flatten
+# view ----> ravel      
+
+# copy 
+# a = np.array([[1,2,3,4,5]])
+# print(a)
+# x = a.copy()   # it copy but doesn't convert into 1d array
+# print(x)
+
+# views
+a = np.array([[1,2,3,4,5]])
+print(a)
+x = a.view()  # it share the memory address and the change the original copy
+print(x)
+x[1] = 200
+print(x)    # [  1 200   3   4   5]
+print(a)
