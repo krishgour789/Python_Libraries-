@@ -80,6 +80,9 @@ print(b.ndim)
 
 # a = np.zeros((2,3),dtype=int)-6
 # print(a)
+# a = np.zeros((2,3),dtype=bool)+True
+# print(a)
+
 
 '''[[-6 -6 -6]
  [-6 -6 -6]]
@@ -101,6 +104,9 @@ print(b.ndim)
 '''linspace'''  # it give equal values or distance
 # k = np.linspace(1,10,4,retstep=True,dtype=int)
 # print(k)
+
+# l = np.linspace(1,10,2,retstep=True,dtype=int)
+# print(l)
 
 
 ''' if we want to insert the value in array then we use insert function'''
@@ -262,10 +268,62 @@ print(np.square(a))  # it will return the square of each element in the array a
 # print(x)
 
 # views
-a = np.array([[1,2,3,4,5]])
-print(a)
-x = a.view()  # it share the memory address and the change the original copy
-print(x)
-x[1] = 200
-print(x)    # [  1 200   3   4   5]
-print(a)
+# a = np.array([[1,2,3,4,5]])
+# print(a)
+# x = a.view()  # it share the memory address and the change the original copy
+# print(x)
+# x[0] = 200
+# print(x)    # [  1 200   3   4   5]
+# print(a)
+
+#Matrix Multiplication -> it require minimun two and 2-d arrays. it is use for matrix
+# x1 = np.array([[1,2],[3,4]])
+# x2 = np.array([[6,2],[7,4]])
+# print(x1@x2)
+
+
+#Searching --> it return on index base
+# a = np.array([10,20,3,5,54,23])
+# l = np.where(a>30)
+# print(l) 
+
+# a = np.array([10,20,3,5,54,23])
+# l = np.where(a>5)
+# print(l) 
+#output -> (array([0, 1, 4, 5]),)
+
+# a = np.array([10,20,3,5,54,23])
+# l = np.where(a>5)
+# print(a[l]) 
+#output -> (array([10 20 54 23]),)
+
+# a = np.array([10,20,3,5,54,23])
+# l = np.where(a%2==0)   #it return all even numbers
+# print(a[l])
+
+# a = np.array([10,20,3,5,54,23])
+# l = np.where(a%2==0,1,0)   #it return all even numbers
+# print(l)
+
+# x = np.array([1,2,3,5,6])
+# y = np.array([3,3,22,3,4])
+# print(np.where(x>y,x,y))
+
+# a = np.array([1,2,3,4,5])
+# b  = np.array([10,20,30,40,50])
+# c = a+b
+# print(c)
+# np.save("myfile",c) #it is use to create the file
+# np.load("myfile.npy")  # it is use to show the data 
+# np.savetxt("boss2.txt",c,fmt="%d",header="welcome to my file",footer="Done")
+# np.loadtxt("boss2.txt")
+
+# a = np.array([1,29,34,23,50])
+# b = np.array([23,12,43,34,23])
+# c = np.where(a>b,a,b)
+# np.savetxt('boss2.txt',b)
+# np.loadtxt("boss2.txt")
+
+n = np.array([2,3,6,7,3,8,9,10])
+ar = np.where(n%2==1,-1)
+print(ar)
