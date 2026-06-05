@@ -324,6 +324,39 @@ print(np.square(a))  # it will return the square of each element in the array a
 # np.savetxt('boss2.txt',b)
 # np.loadtxt("boss2.txt")
 
-n = np.array([2,3,6,7,3,8,9,10])
-ar = np.where(n%2==1,-1)
-print(ar)
+# n = np.array([2,3,6,7,3,8,9,10])
+# ar = np.where(n%2==1,-1)
+# print(ar)
+
+# a = np.array([1,20,3,121,1,3,2,3])
+# print(np.unique(a)) #it will return the unique value and sort it in ascending order
+
+# a = np.array([0,0,1,2,3,0,0])
+# print(np.trim_zeros(a))  #it will remove the zeroes from first and last
+# print(np.trim_zeros(a,trim='f'))  #it will rremove the front zeros
+# print(np.trim_zeros(a,trim='b'))  #it will rremove the back zeros
+
+# a = np.array([10,20,30,40,50])
+# b = np.array([10,2,3,50,40])
+# print(np.intersect1d(a,b))  #return common values form both array
+# print(np.union1d(a,b))      #return all values from both array except duplicated values 
+# print(np.setxor1d(a,b))     # return the values that are not common
+
+# v1 = np.array([1,2,3,4,5])
+# v2 = np.array([20,38,43,56,45])
+# v3 = np.array([200,308,403,576,485])
+# f = list(zip(v1,v2,v3))  # we can also convert this into a list with the help of zip
+# print(f)
+# for i in zip(v1,v2,v3):  # this function is used to iterate multiple arrays
+#     print(np.sum(i))
+
+#store a null value in list
+# a = [1,5,6,None] 
+# a = [1,5,6,np.nan]  # np.nan is a null value in numpy. In core python it is None value
+# k = np.array(a)
+# print(np.isnan())
+
+# a = np.array([19,0,12,3,0,34,0])
+# print(a)
+# print(np.count_nonzero(a))  # it will count the non-zero in array
+# print(np.nonzero(a)) # it will return the index of nonzero
