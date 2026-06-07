@@ -360,3 +360,18 @@ print(np.square(a))  # it will return the square of each element in the array a
 # print(a)
 # print(np.count_nonzero(a))  # it will count the non-zero in array
 # print(np.nonzero(a)) # it will return the index of nonzero
+
+# a = np.array([1,2,3,4,6,7,4,3,3,]).reshape(3,3)
+# b = np.array([1,2,3,4,6,7,4,3,3]).reshape(3,3)
+
+# print(a@b)
+
+# remove the duplicate values from the array
+# arr = np.array([1,2,3,4,5,6,7,8,9,1,2,3])
+# print(np.unique(arr))
+
+
+# Create a 10×10 multiplication table using NumPy.
+a = np.array(range(1,11)).reshape(10,1)  # it will create a column vector
+b = np.array(range(1,11)).reshape(1,10)  # it will create a row vector
+multiplication_table = a @ b  # it will perform matrix multiplication and return the multiplication table
