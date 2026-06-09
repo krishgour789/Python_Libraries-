@@ -58,7 +58,10 @@ print(b.ndim)
 # print(ar.ndim)
 
 # eye = it is used to create an identity matrix {it is a square matrix with 1's on the diagonal and 0's elsewhere}
-# e = np.eye(10)
+# e = np.eye(3)
+# print(e)
+# print(e.ndim)
+# e = np.eye(3,dtype=bool)+True
 # print(e)
 # print(e.ndim)
 
@@ -72,6 +75,14 @@ print(b.ndim)
 # print(k)
 
 #-------------Broadcasting Operator------------
+'''Broadcasting is a powerful mechanism that allows NumPy to 
+perform operations on arrays of 
+different shapes and sizes. It automatically applies the operation
+ to each element of the array, even if the arrays have different shapes. 
+This can be very useful for performing mathematical operations on arrays 
+without having to write explicit loops.'''
+
+
 # a = np.zeros((2,3))+6
 # print(a)
 
@@ -105,6 +116,9 @@ print(b.ndim)
 # k = np.linspace(1,10,4,retstep=True,dtype=int)
 # print(k)
 
+# l = np.linspace(5,50,10,retstep=True,dtype=int)
+# print(l)
+
 # l = np.linspace(1,10,2,retstep=True,dtype=int)
 # print(l)
 
@@ -115,6 +129,9 @@ print(b.ndim)
 # print(np.insert(k,3,34))  #(arrayname,index,value) with this we can insert with position
 # print(np.append(k,400)) # with the help of append we can insert the value in last 
 # print(np.delete(k,2))  #with the help of delete module we can delete with indexing number 
+
+# a = np.array([[1,2,3],[4,5,6],[7,8,9]])
+# print(np.insert(a,1,34))  # it will insert the value 34 in the row with index 1
 
 ''''to find the row and column in array '''
 # k = [[1,2,3],[23,24,1],[4,3,6]]
@@ -128,6 +145,8 @@ print(b.ndim)
 # k = [[1,2,3],[23,24,1],[4,3,6]]
 # j = np.array(k)
 # print(np.transpose(j))
+
+
 
 
 ''' to add the two array if they are 1d and 2d'''
